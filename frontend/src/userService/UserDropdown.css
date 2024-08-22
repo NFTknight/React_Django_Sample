@@ -1,0 +1,70 @@
+.user-section {
+    position: relative;
+    display: inline-block;
+}
+
+.user-display {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-display:hover {
+    background: rgba(0, 0, 0, 0.05); /* Slight gray background when hovering over user's name */
+}
+
+.dropdown-menu1 {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    z-index: 1000;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* This is to display the dropdown when isOpen state is true */
+/* Assuming you add a 'show' class to the dropdown when it's open */
+.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu1 a, 
+.dropdown-menu1 button {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #f1f1f1; /* Slight border for visual separation */
+    transition: background 0.2s ease;
+}
+
+.dropdown-menu1 a:last-child, 
+.dropdown-menu1 button:last-child {
+    border-bottom: none; /* Remove border for the last item */
+}
+
+.dropdown-menu1 a:hover, 
+.dropdown-menu1 button:hover {
+    background-color: #f5f5f5;
+    color: #555;
+}
+
+.dropdown-menu1 button {
+    cursor: pointer;
+    outline: none;
+}
+

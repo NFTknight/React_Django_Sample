@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: decode
+  labels:
+    app: decode
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: decode
+  template:
+    metadata:
+      labels:
+        name: decode
+    spec:
+      initContainers:
+        - name: decode-migrations
+          image: de_code_submit:latest
+          imagePullPolicy: "IfNotPresent"
+          command: [ "/bin/sh" ]
+          args:
+            - "-c"
+            - python manage.py migrate
+      containers:
+        - name: decode
+          image: de_code_submit:latest
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 80
+          env:
+            - name: POSTGRES_USER
+              value: "admin"
+            - name: POSTGRES_PASSWORD
+              value: "admin"
+            - name: POSTGRES_DB
+              value: "postgresdb"
+            - name: DATABASE_URL
+              value: psql://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@postgres:5432/$(POSTGRES_DB) #postgres here must match the PostgreSQL service name you created earlier
+
+---
+# START Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: decode
+  labels:
+    app: decode
+spec:
+  ports:
+    - port: 80 #port that the service exposes
+      targetPort: 80 #port that the app is receiving requests from via the pod
+  selector:
+    name: decode
+# END SERVICE

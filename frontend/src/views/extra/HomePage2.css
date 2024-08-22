@@ -1,0 +1,130 @@
+/* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Header Styles */
+
+header {
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+nav img {
+  height: 40px;
+
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+/* Hero Section Styles */
+
+.hero {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  text-align: center;
+
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+
+}
+
+.hero p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+
+}
+
+/* Why DeCode Section Styles */
+
+.why-decode {
+  padding: 40px 20px;
+}
+
+.why-decode h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Benefits Section Styles */
+
+.benefits {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+}
+
+.benefits h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits li {
+  margin-bottom: 15px;
+}
+
+/* Get Started Section Styles */
+
+.get-started {
+  padding: 160px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+

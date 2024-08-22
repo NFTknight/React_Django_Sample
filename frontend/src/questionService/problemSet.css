@@ -1,0 +1,29 @@
+.problemset {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  background-color: var(--dl-color-gray-900);
+}
+.content {
+  min-height: calc(100vh - 347px);
+}
+.createbtn {
+    display: flex;
+    float: right;
+    margin: 20px;
+}
+.filter{
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+.table {
+  width: 60%;
+  margin-left: 20%;
+  height: 100%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}

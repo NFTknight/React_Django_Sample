@@ -1,0 +1,110 @@
+/* styles.css */
+.outside_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .login-container {
+
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px; /* Increase the padding for more height */
+
+    text-align: center;
+    width: 500px;
+    /* height: 500px; Add a fixed height here */
+
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .icon-container img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    display: block; /* Display the "Signup" link on a new line */
+
+  }
+
+  .forgot-password-link {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    display: block; /* Display the "Signup" link on a new line */
+
+  }
+
+  .or-sign-in-with {
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+  }
+  
+  .or-separator {
+    position: absolute;
+    top: -10px; /* Adjust this value to control the position of the separator */
+    left: 0;
+    right: 0;
+    height: 1px; /* Height of the separator line */
+    background-color: #ccc; /* Color of the separator line */
+
+  }

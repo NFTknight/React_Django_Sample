@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-app
+  template:
+    metadata:
+      labels:
+        app: react-app
+    spec:
+      containers:
+        - name: react-app
+          image: frontend_decode
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 80
+
+---
+# START Service
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: react-app
+#spec:
+#  type: NodePort
+#  selector:
+#    app: react-app
+#  ports:
+#    - port: 80
+#      protocol: TCP
+#      targetPort: 80
+#      nodePort: 31000
+# END Service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-app
+spec:
+  type: LoadBalancer
+  selector:
+    app: react-app
+  ports:
+    - port: 80
+      targetPort: 80
+
+

@@ -1,0 +1,24 @@
+# Headless service for stable DNS entries of StatefulSet members.
+apiVersion: v1
+kind: Service
+metadata:
+  name: sparkdriver
+spec:
+  clusterIP: None
+  selector:
+    name: decode
+
+#---
+
+# Client service for connecting to any spark instance.
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: sparkdriver
+#spec:
+#  type: NodePort
+#  ports:
+#  - name: sparkdriver
+#    port: 9100
+#  selector:
+#    app: sparkrunner

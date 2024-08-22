@@ -1,0 +1,79 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    padding: 20px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-content {
+    padding: 40px 0;
+  }
+  
+  .hero-section {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .features-section {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .testimonials-section {
+    background-color: #f2f2f2;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .footer-section {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  /* Add additional styling for features, testimonials, and footer */
+  
